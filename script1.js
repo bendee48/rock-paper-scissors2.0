@@ -5,6 +5,16 @@ start.addEventListener('click', function(e){
   main.style.display = "flex";
 });
 
+/*Records choice then plays round*/
+window.addEventListener('click', function(e){
+  let choice = e.srcElement.name;
+  if (!choice) {
+    return
+  } else {
+    playRound(choice, computerPlay())
+  }
+})
+
 function computerPlay() {
   let arr = ["rock", "paper", "scissors"];
   return arr[Math.floor(Math.random() * 3)];
@@ -15,9 +25,18 @@ function capitalize(str) {
   return res;
 }
 
-function playRound(plySelect, comSelect) {
-  plySelect = plySelect.toLowerCase();
+function test() {
+  let arr = ["hello", "bye", "hey"];
+  for (i in arr) {
+    let container = document.querySelector('#text-content');
+    let content = document.createElement("div");
+    content.textContent = i;
+    container.appendChild(content);
+  }
+}
 
+function playRound(plySelect, comSelect) {
+  /*plySelect = plySelect.toLowerCase();*/
   if (plySelect === comSelect) {
     console.log("It's a Draw!");
     return 0;
