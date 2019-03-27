@@ -58,6 +58,8 @@ function displayContent(text) {
   content.textContent = text;
   if (text.includes("!")) {
     content.style.fontSize = "1.5em";
+    content.style.fontWeight = "bold";
+    content.style.fontStyle = "italic";
   }
   container.appendChild(content);
 }
@@ -110,55 +112,3 @@ function playRound(plySelect, comSelect) {
     }
   }
 }
-
-
-
-
-
-
-// function answerBad(answer) {
-//   if (answer === "rock" || answer === "paper" || answer === "scissors" ) {
-//     return false;
-//   } else {
-//     return true;
-//   }
-// }
-
-// function game() {
-//   let playerScore = 0;
-//   let compScore = 0;
-//
-//   for (let i = 0; i < 5; i++) {
-//     let answer = prompt("Rock, Paper or Scissors?");
-//     answer = answer.toLowerCase();
-//
-//     while (answerBad(answer)) {
-//       secAnswer = prompt("Incorrect value: You need to enter either 'rock', 'paper' or 'scissors'.");
-//       answer = secAnswer.toLowerCase();
-//     }
-//
-//     res = playRound(answer, computerPlay());
-//     switch (res) {
-//       case 1:
-//         playerScore++;
-//         break;
-//       case -1:
-//         compScore++;
-//         break;
-//     }
-//     console.log(res);
-//     console.log(`Current scores: Player = ${playerScore}, Computer = ${compScore}`);
-//   }
-//
-//   if (playerScore > compScore) {
-//     console.log("Congratulations, you win!");
-//     console.log(`Final score: Player = ${playerScore}, Computer = ${compScore}`);
-//   } else if (compScore > playerScore) {
-//     console.log("Ah boo, you lose!");
-//     console.log(`Final score: Player = ${playerScore}, Computer = ${compScore}`);
-//   } else {
-//     console.log("After all that it was a draw.");
-//     console.log(`Final score: Player = ${playerScore}, Computer = ${compScore}`);
-//   }
-//
-// }

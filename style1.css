@@ -5,6 +5,30 @@ body {
 
 /*Headers*/
 
+.how-to {
+  text-align: left;
+  width: 300px;
+  position: fixed;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.how-to-content {
+  text-align:left;
+  position: relative;
+  display: none;
+  font-size: 0.8em;
+  font-weight: normal;
+  background-color: #e3e3e3;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.how-to:hover .how-to-content {
+  display: block;
+}
+
 header#title-header {
   margin-top: 3%;
 }
