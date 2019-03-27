@@ -26,7 +26,7 @@ function endGame() {
   endBtn.style.display = "block";
   container.style.display = "none";
   endBtn.addEventListener('click', function() {
-    window.location.reload(false); 
+    window.location.reload(false);
   });
 }
 
@@ -56,6 +56,9 @@ function capitalize(str) {
 function displayContent(text) {
   let content = document.createElement('p');
   content.textContent = text;
+  if (text.includes("!")) {
+    content.style.fontSize = "1.5em";
+  }
   container.appendChild(content);
 }
 
