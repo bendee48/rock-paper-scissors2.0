@@ -9,8 +9,8 @@ header h1 {
 header#scores {
   width: 40%;
   margin: 0 auto;
-  display: flex;
   justify-content: space-evenly;
+  display: none;
 }
 
 header div h2, div {
@@ -31,6 +31,12 @@ section#text-content {
 button.start-btn {
   margin: 0 auto;
   display: block;
+}
+
+button.end-btn {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
 }
 
 main {
